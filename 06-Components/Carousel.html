@@ -100,7 +100,24 @@
       right: 0;
       transform: translate(50%,0);
     }
-
+    .dots{
+      bottom: 0;
+      left: 50%;
+      position: absolute;
+      transform: translate(-50%,250%);
+    }
+    .dot{
+      border-radius: 50%;
+      border: none;
+      height: 12px;
+      width: 12px;
+      border: 2px solid #087f5b;
+      background-color: rgb(255, 255, 255);
+      margin: 0px 5px;
+    }
+    .dots .active{
+      background-color: #087f5b;
+    }
   </style>
 </head>
 
@@ -130,8 +147,12 @@
 </svg>
 </button>
 
-<div>
-  
+<div class="dots">
+  <button class="dot active">&nbsp;</button>
+  <button class="dot">&nbsp;</button>
+  <button class="dot">&nbsp;</button>
+  <button class="dot">&nbsp;</button>
+
 </div>
 
   </div>
