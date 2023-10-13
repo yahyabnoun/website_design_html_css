@@ -1,42 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carousel</title>
 
-    <style>
-              /*
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carousel</title>
+
+  <style>
+    /*
       SPACING SYSTEM (px)
       2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
       FONT SIZE SYSTEM (px)
       10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
       */
-      /* 
+    /* 
       MAIN COLOR: #087f5b
       GREY COLOR: #343a40
       */
 
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-      body {
-        font-family: "Inter", sans-serif;
-        color: #343a40;
-        line-height: 1;
-      }
-      .Carousel {
-        width: 700px;
-        margin: 100px auto;
-        height: 300px;
+    body {
+      font-family: "Inter", sans-serif;
+      color: #343a40;
+      line-height: 1;
+    }
 
-      }
-    </style>
+    .Carousel {
+      color: rgb(255, 255, 255);
+      width: 800px;
+      margin: 70px auto;
+      background-color: #087f5b;
+      border-radius: 8px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 86px;
+      align-items: center;
+      padding: 32px;
+      padding-left: 90px;
+      position: relative;
+    }
+
+    .Carousel img {
+      height: 200px;
+      transform: scale(1.5);
+      border-radius: 8px;
+      box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.2);
+
+    }
+
+    .testimoial .author-testimoial,
+    .testimoial .job-testimoial {
+      font-weight: 500;
+      color: rgba(213, 253, 219, 0.7);
+    }
+
+    .testimoial .text-testimoial {
+      font-size: 18px;
+      font-weight: 500;
+      margin-bottom: 32px;
+      line-height: 1.4;
+    }
+
+    .testimoial .author-testimoial {
+      font-size: 14px;
+      margin-bottom: 4px;
+    }
+
+    .testimoial .job-testimoial {
+      font-size: 12px;
+    }
+
+    .btn{
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      background-color: rgb(255, 255, 255);
+      border-radius: 50%;
+      box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.2);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: none;
+    }
+    .btn .left,.btn .right{
+      stroke: #087f5b;
+      width: 24px;
+      height: 24px;
+    }
+    .btn--left{
+      left: 0;
+      transform: translate(-50%,0);
+    }
+    .btn--right{
+      right: 0;
+      transform: translate(50%,0);
+    }
+
+  </style>
 </head>
+
 <body>
-    
+  <div class="Carousel">
+    <img src="./maria.jpg" alt="">
+    <div class="testimoial">
+      <p class="text-testimoial">" Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam blanditiis accusamus,
+        sapiente nostrum
+        molestiae, asperiores velit veniam voluptates "</p>
+      <p class="author-testimoial">Maria de Almeida</p>
+      <p class="job-testimoial">Senior Product Manager at EDP Comercial</p>
+    </div>
+
+<button class="btn btn--left">
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+  class="left">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+</svg>
+</button>
+
+
+<button class="btn btn--right">
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+  class="right">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+</svg>
+</button>
+
+<div>
+  
+</div>
+
+  </div>
 </body>
+
 </html>
